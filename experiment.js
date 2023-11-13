@@ -21,6 +21,7 @@ function preloadImages(imageUrls, callback) {
 
     // Image error event (in case the image fails to load)
     img.onerror = function () {
+      console.log('image load error', url);
       if (--imagesToLoad === 0) {
         // All images have been loaded, even if some failed
         callback(loadedImages);
@@ -44,12 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
     './images/right-3.jpg',
   ];
   let image_index = 0;
-
-  // Play the video and increase it's opacity
-  setTimeout(() => {
-    video.style.opacity = 1;
-    video.play();
-  }, 3000);
 
   //call this function after preloading all the images
   function changeImage() {
@@ -77,6 +72,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   preloadImages(background_image_array, () => {
     console.log('images have been preloaded');
+    // Play the video and increase it's opacity
+    setTimeout(() => {
+      video.style.opacity = 1;
+      video.play();
+    }, 4500);
+
     //do it when changing image... not randomly.
     setInterval(() => {
       animateSecondaryHeading(3600);
