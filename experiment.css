@@ -122,12 +122,12 @@ nav ul li:last-child {
 
 .image-1 {
   border-right: solid 0.5px #192d54;
-  background-image: url('./images/left-1.jpg');
+  background-image: url('https://prabhasmediabucket.s3.ap-south-1.amazonaws.com/left-1.jpg');
   justify-content: end;
   align-items: center;
 }
 .image-2 {
-  background-image: url('./images/right-1.jpg');
+  background-image: url('https://prabhasmediabucket.s3.ap-south-1.amazonaws.com/right-1.jpg');
   justify-content: flex-start;
   align-items: center;
 }
