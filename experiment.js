@@ -1,9 +1,19 @@
+const loadedImages = [];
+
+const background_image_array = [
+  'https://prabhasmediabucket.s3.ap-south-1.amazonaws.com/left-1.jpg',
+  'https://prabhasmediabucket.s3.ap-south-1.amazonaws.com/right-1.jpg',
+  'https://prabhasmediabucket.s3.ap-south-1.amazonaws.com/left-2.jpg',
+  'https://prabhasmediabucket.s3.ap-south-1.amazonaws.com/right-2.jpg',
+  'https://prabhasmediabucket.s3.ap-south-1.amazonaws.com/left-3.jpg',
+  'https://prabhasmediabucket.s3.ap-south-1.amazonaws.com/right-3.jpg',
+];
+
 function chooseNextIndex(currentIndex, maxIndex) {
   return currentIndex === maxIndex - 1 ? 0 : currentIndex + 1;
 }
 
 function preloadImages(imageUrls, callback) {
-  const loadedImages = [];
   let imagesToLoad = imageUrls.length;
 
   imageUrls.forEach((url) => {
@@ -36,14 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const animation_class_long = 'sliding-from-left-slow';
   const transition_mask = document.querySelector('.transition-mask');
   const image_changing_div = document.querySelector('.image-1');
-  const background_image_array = [
-    './images/left-1.jpg',
-    './images/right-1.jpg',
-    './images/left-2.jpg',
-    './images/right-2.jpg',
-    './images/left-3.jpg',
-    './images/right-3.jpg',
-  ];
+
   let image_index = 0;
 
   //call this function after preloading all the images
@@ -76,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
       video.style.opacity = 1;
       video.play();
-    }, 4500);
+    }, 3600);
 
     //do it when changing image... not randomly.
     setInterval(() => {
