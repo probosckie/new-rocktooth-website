@@ -1,6 +1,34 @@
 function chooseNextIndex(currentIndex, maxIndex) {
   return currentIndex === maxIndex - 1 ? 0 : currentIndex + 1;
 }
+
+function preloadImages(imageUrls, callback) {
+  const loadedImages = [];
+  let imagesToLoad = imageUrls.length;
+
+  imageUrls.forEach((url) => {
+    const img = new Image();
+    img.src = url;
+
+    // Image load event
+    img.onload = function () {
+      loadedImages.push(img);
+      if (--imagesToLoad === 0) {
+        // All images have been loaded
+        callback(loadedImages);
+      }
+    };
+
+    // Image error event (in case the image fails to load)
+    img.onerror = function () {
+      if (--imagesToLoad === 0) {
+        // All images have been loaded, even if some failed
+        callback(loadedImages);
+      }
+    };
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const video = document.querySelector('#bandvideo');
   const heading_long = document.querySelector('header h2 span');
@@ -46,9 +74,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   animateSecondaryHeading(4500);
-  //do it when changing image... not randomly.
-  setInterval(() => {
-    animateSecondaryHeading(3500);
-    changeImage();
-  }, 6000);
+
+  preloadImages(background_image_array, () => {
+    console.log('images have been preloaded');
+    //do it when changing image... not randomly.
+    setInterval(() => {
+      animateSecondaryHeading(3600);
+      changeImage();
+    }, 7200);
+  });
 });
