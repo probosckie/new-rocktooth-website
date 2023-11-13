@@ -17,6 +17,7 @@ const background_image_array_desktop = [
   './images/desktop-5.jpg',
   './images/desktop-6.jpg',
   './images/desktop-7.jpg',
+  './images/desktop-8.jpg',
 ];
 
 const background_image_array_mobile = [
@@ -27,6 +28,7 @@ const background_image_array_mobile = [
   './images/mobile-5.jpg',
   './images/mobile-6.jpg',
   './images/mobile-7.jpg',
+  './images/mobile-8.jpg',
 ];
 
 const total_images = background_image_array_desktop.length;
