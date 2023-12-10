@@ -1,0 +1,160 @@
+body {
+  background-color: #fff;
+}
+
+nav {
+  margin-top: 18px;
+}
+nav ul li.active {
+  border-bottom: dashed 1px #00a4ff3b;
+}
+
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:active {
+  color: #007bbd;
+  text-decoration: none;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a:hover {
+  color: #0187ce;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  position: relative;
+}
+
+.sticky-zebra {
+  width: 50%;
+  background-image: url('images/zebra-pattern.jpg');
+  height: 9px;
+  background-repeat: repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  left: 25vw;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.pad-top-header {
+  padding-top: 60px;
+}
+
+header h1 {
+  font-family: 'SansExtraLight';
+  font-size: 39px;
+  background-image: url('images/gallery-header-image.jpg');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position-y: 0px;
+  padding-left: 8px;
+  padding-top: 10px;
+}
+
+.header-image {
+  position: absolute;
+}
+
+.shift-left {
+  position: relative;
+  right: 2px;
+}
+
+.names-of-bands-carousel {
+  width: 100%;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+}
+
+/* Styling for the scrolling text */
+.scrolling-text {
+  white-space: nowrap; /* Prevents text from wrapping */
+  animation-name: scroll-text;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration: 20s;
+  /* animation:  5s linear infinite; */
+  display: inline-block;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%); /* Start offscreen right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move offscreen left */
+  }
+}
+
+.videos-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  background-image: url('images/random-color-1.jpg');
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: -60px 0;
+  background-attachment: fixed;
+  padding-top: 30px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.videos-list iframe {
+  border-radius: 3px;
+  border: solid 2px #aaaffe;
+  z-index: 2;
+}
+
+.restricted-video-image-link {
+  width: 560px;
+  border-radius: 3px;
+  border: solid 2px #aaaffe;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.restricted-video-image-link:hover {
+  opacity: 0.94;
+}
+
+@media screen and (max-width:800px) {
+  .restricted-video-image-link{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .restricted-video-link{
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .videos-list{
+    padding-bottom: 60px;
+  }
+
+  .videos-list iframe {
+    width: 95%;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  .sticky-zebra {
+    width: 60%;
+    left: 20vw;
+  }
+}
+
+

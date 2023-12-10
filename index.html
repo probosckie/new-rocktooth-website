@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Tooth Authority</title>
+    <link rel="stylesheet" href="./common.css" />
     <link rel="stylesheet" href="./experiment.css" />
+    <link rel="stylesheet" href="./footer.css" />
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Members</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Gallery</a></li>
+          <li class="active"><a href="./index.html">Home</a></li>
+          <li><a href="./members.html">Members</a></li>
+          <li><a href="#contact" class="contact-link">Contact</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
         </ul>
       </nav>
       <section class="flex-section height-100 image-container">
@@ -25,15 +27,14 @@
               >Rock<i>t</i><span class="move-right-2">oo</span><i>th</i>
             </span>
           </h1>
-          <button class="button-left">Watch</button>
-          <button class="button-left-2">Reach Out</button>
+          <button class="button-left button-book-1">Book</button>
+          <button class="button-left-2 button-watch" onclick="window.location.href='./gallery.html'">Watch</button>
         </div>
 
         <div class="image-2 image-box">
           <img class="header-image-2 header-image" src="" />
           <video loop id="bandvideo" loop muted playsinline>
             <source src="https://prabhasmediabucket.s3.ap-south-1.amazonaws.com/video-to-play.mp4" type="video/mp4" />
-            <!-- Add additional source elements for different video formats (e.g., WebM, Ogg) -->
             Your browser does not support the video tag.
           </video>
           <h2>
@@ -41,10 +42,94 @@
               >Revive Rọck in all forms and glor<i>y</i>
             </span>
           </h2>
-          <button class="button-right">Reach Out</button>
+          <button class="button-right button-book-2">Book</button>
         </div>
       </section>
     </header>
+    <footer id="contact">
+      <div class="zebra-pattern"></div>
+      <div class="leaves-pattern"></div>
+      <div class="left-face-1"></div>
+      <div class="left-face-2"></div>
+      <div class="left-face-3"></div>
+      <div class="text-center-section">
+        In the electric heartland of
+        <span class="semi-bold">&nbsp;Bangalore&nbsp;</span> where the city's
+        heartbeat pulses to the rhythm of innovation and creativity, a new flame
+        ignites <br /><br />
+        A flame kindled by a group of amazing musicians, each a maestro in their
+        own right converging under the banner of resurgent rock.
+      </div>
+      <div class="footer-contacts">
+        <div class="contact-section">
+          <div class="find-us">
+            <img
+              src="images/find-us.svg"
+              class="find-us-image"
+              alt="find us on social media"
+            />
+            <a
+              href="https://www.instagram.com/rocktoothauthority"
+              class="image-link"
+              target="_blank"
+            >
+              <img
+                src="images/instagram.jpg"
+                class="instagram-image"
+                alt="find us on instagram"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61553429782010&mibextid=ZbWKwL"
+              class="image-link"
+              target="_blank"
+            >
+              <img
+                src="images/facebook.jpg"
+                class="facebook-image"
+                alt="find us on facebook"
+              />
+            </a>
+            <a
+              href="https://youtube.com/@RockTooth"
+              class="image-link"
+              target="_blank"
+            >
+              <img
+                src="images/youtube.jpg"
+                class="youtube-image"
+                alt="find us on youtube"
+              />
+            </a>
+            <a
+              href="https://wa.me/8150929045"
+              class="image-link"
+              target="_blank"
+            >
+              <img
+                src="images/whatsapp.jpg"
+                class="whatsapp-image"
+                alt="find us on whatsapp"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="corp-show">
+          <div class="corp-rock-show">
+            <img
+              src="images/corporaterock.jpg"
+              class="corp-show-icon"
+              alt="funny looking corporate rock icon"
+            />
+            <img
+              src="images/corpshow.jpg"
+              class="corp-rock-show-icon"
+              alt="reach out for corporate shows"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
     <script type="text/javascript" src="./experiment.js"></script>
   </body>
 </html>

@@ -1,74 +1,5 @@
-@font-face {
-  font-family: 'SansLight';
-  src: url('font/JosefinSansLight.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'SansExtraLight';
-  src: url('font/JosefinSansExtraLight.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'SansSemiBold';
-  src: url('font/JosefinSans-SemiBold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'SansRegular';
-  src: url('font/JosefinSans-Regular.woff') format('woff');
-}
-
-body,
-h1,
-h2,
-p,
-ul,
-li,
-a,
-header {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'SansLight';
-}
-
 header {
   height: 100vh;
-}
-
-nav {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  margin-top: 15px;
-  z-index: 4;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 36px;
-  font-family: 'SansSemiBold';
-  font-size: 15px;
-  line-height: normal;
-  padding: 3px 2px 1px 1px;
-}
-
-@media screen and (max-width: 800px) {
-  nav ul li {
-    margin-right: 24px;
-    font-family: 'SansRegular';
-  }
 }
 
 nav ul li.active {
@@ -82,6 +13,13 @@ nav ul li a:active {
   text-decoration: none;
 }
 
+a.image-link:link,
+a.image-link:visited,
+a.image-link:active {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 nav ul li a:hover {
   color: #dcf2f3d4;
   text-decoration: none;
@@ -90,10 +28,6 @@ nav ul li a:hover {
 
 nav ul li:last-child {
   margin-right: 0;
-}
-
-.flex-section {
-  display: flex;
 }
 
 .height-100 {
@@ -120,16 +54,6 @@ nav ul li:last-child {
 .header-image-2 {
   right: 0;
 }
-
-/* .transition-mask {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  background-color: black;
-  z-index: 3;
-  transition: opacity 0.9s;
-  opacity: 0;
-} */
 
 .image-1 {
   border-right: solid 0.5px #192d54;
@@ -233,8 +157,8 @@ header section.image-container {
 }
 
 .sliding-from-left-slow {
-  margin-left: -100%;
-  animation: slide-left 0.9s ease-in-out 2 alternate-reverse forwards;
+  margin-left: -80%;
+  animation: slide-left 1s ease-in-out 2 alternate-reverse forwards;
 }
 
 header button {
@@ -293,7 +217,6 @@ video {
   opacity: 0;
 }
 
-.move-right-2 {
-  position: relative;
-  left: 2px;
+footer {
+  border-top: 1px solid #4e64d8;
 }
