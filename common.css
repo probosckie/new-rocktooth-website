@@ -265,6 +265,12 @@ footer {
   transition: transform 0.3s ease-out;
 }
 
+@media screen and (max-width:800px) {
+  .whatsapp-image{
+    right: -18px;
+  }
+}
+
 .instagram-image:hover,
 .facebook-image:hover,
 .youtube-image:hover,
